@@ -1,0 +1,109 @@
+/* Importar tipografía Work Sans (misma que Vester) */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
+
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+/* Variables CSS — Colores SENA institucionales */
+:root {
+  --sena-green: #39a900;
+  --sena-blue: #00324d;
+  --sena-white: #ffffff;
+  --sena-gray-light: #f2f2f2;
+  --sena-gray-dark: #333333;
+}
+
+body {
+  font-family:
+    "Work Sans",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  @apply bg-gray-50 text-gray-800 antialiased;
+  line-height: 1.6;
+}
+
+/* Encabezados con color institucional */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--sena-blue);
+  line-height: 1.3;
+}
+
+/* Excepción: headings dentro de bg oscuro/verde */
+header h1,
+header h2,
+header h3,
+footer h1,
+footer h2,
+footer h3 {
+  color: inherit;
+}
+
+/* Animaciones */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes zoom-in-95 {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes modal-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+.animate-in {
+  animation:
+    fade-in 0.2s ease-out,
+    zoom-in-95 0.2s ease-out;
+}
+.animate-modal {
+  animation: modal-enter 0.2s ease-out;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--sena-gray-light);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* File input styling — verde institucional */
+input[type="file"]::file-selector-button {
+  @apply px-4 py-2 mr-3 rounded-lg border-0 font-medium cursor-pointer;
+  background-color: rgba(57, 169, 0, 0.1);
+  color: var(--sena-green);
+  transition: background-color 0.15s;
+}
+input[type="file"]::file-selector-button:hover {
+  background-color: rgba(57, 169, 0, 0.2);
+}
