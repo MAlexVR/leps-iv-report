@@ -45,24 +45,24 @@ Si la aplicación es para el "SENA" o se trata de un "Simulador", es OBLIGATORIO
 Debes estructurar el proyecto siguiendo este esquema exacto:
 
 /public
-/fonts -> Tipografías locales.
-/assets
-/logos -> Logotipos institucionales (SENA, logos de la app).
-/icons -> SVGs estáticos o webclips (no el favicon principal).
-/images -> Fondos, ilustraciones y recursos gráficos.
-/templates -> Archivos base para descargas, marcas de agua (jsPDF), Excels de muestra.
+  /fonts              -> Tipografías locales.
+  /assets
+    /logos            -> Logotipos institucionales (SENA, logos de la app).
+    /icons            -> SVGs estáticos o webclips (no el favicon principal).
+    /images           -> Fondos, ilustraciones y recursos gráficos.
+    /templates        -> Archivos base para descargas, marcas de agua (jsPDF), Excels de muestra.
 
 /src
-/app -> Pages y Layouts (Rutas de Next.js: page.tsx, layout.tsx).
-favicon.ico -> (Obligatorio) Next.js lo inyecta automáticamente desde aquí.
-robots.ts -> (SEO) Reglas de rastreo dinámicas.
-sitemap.ts -> (SEO) Mapa del sitio dinámico.
-/components
-/ui -> Componentes base de shadcn/ui (autogenerados).
-/atoms -> Átomos personalizados (ej. SenaLogo.tsx).
-/molecules -> Moléculas (ej. InputField.tsx que une Input + Label + Error).
-/organisms -> Organismos (ej. SimulatorForm.tsx).
-/templates -> Plantillas (ej. SimulatorLayoutTemplate.tsx).
-/store -> Estado global con Zustand (ej. useSimulatorStore.ts).
-/utils -> Lógica pura, fórmulas matemáticas y exportaciones.
-/lib -> Utilidades generales y configuración (ej. utils.ts de shadcn).
+  /app                -> Pages y Layouts (Rutas de Next.js: page.tsx, layout.tsx).
+    favicon.ico       -> (Obligatorio) Next.js lo inyecta automáticamente desde aquí.
+    robots.ts         -> (SEO) Reglas de rastreo dinámicas.
+    sitemap.ts        -> (SEO) Mapa del sitio dinámico.
+  /components
+    /ui             -> Componentes base de shadcn/ui (autogenerados).
+    /atoms          -> Átomos personalizados (ej. SenaLogo.tsx).
+    /molecules      -> Moléculas (ej. InputField.tsx que une Input + Label + Error).
+    /organisms      -> Organismos (ej. SimulatorForm.tsx).
+    /templates      -> Plantillas (ej. SimulatorLayoutTemplate.tsx).
+  /store            -> Estado global con Zustand (ej. useSimulatorStore.ts).
+  /utils            -> Lógica pura, fórmulas matemáticas y exportaciones.
+  /lib              -> Utilidades generales y configuración (ej. utils.ts de shadcn).
