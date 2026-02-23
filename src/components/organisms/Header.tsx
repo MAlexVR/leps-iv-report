@@ -18,7 +18,7 @@ export function Header({ onShowHelp, onShowAbout }: HeaderProps) {
         <div className="flex items-center gap-3 md:gap-4 flex-shrink-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/logo-leps-white.svg"
+            src="/assets/logos/logo-leps-white.svg"
             alt="LEPS"
             className="h-8 md:h-10 w-auto drop-shadow-sm"
           />

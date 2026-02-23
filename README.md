@@ -22,6 +22,32 @@ Instructor G14 del área de telecomunicaciones
 - **Tablas SunData**: tabla completa de todas las mediciones y promedios por columna (columnas visibles, excluyendo las ocultas igual que en el DAQAnalyzer).
 - **Pre-llenado automático**: los resultados del procesamiento alimentan los pasos del wizard (condiciones de medición, resultados, etc.).
 - **Generación de PDF en formato Carta**: informe multi-página con paginación dinámica, header/footer institucional en cada página y numeración correcta.
+- **Arquitectura de Activos Optimizada**: los recursos gráficos y tipografías están aislados en `public/assets/` y `public/fonts/` (con tipografía local Roboto preconfigurada), siguiendo los lineamientos de diseño atómico.
+- **Sistema Integrado de Skills de IA**: contiene directrices y reglas estrictas de desarrollo bajo el estándar SENA, alojadas de forma nativa en `.agents/skills/sena-simulator-dev/SKILL.md`.
+
+## Estructura de Directorios (Arquitectura Atómica)
+
+El proyecto sigue una estricta arquitectura basada en metodologías modulares y diseño atómico:
+
+```text
+/
+├── public/                 # Assets (fuera del bundle principal)
+│   ├── assets/
+│   │   ├── logos/          # Logos institucionales (SENA, LEPS, etc.)
+│   │   ├── icons/          # Íconos estáticos (.svg, .png)
+│   │   └── images/         # Elementos gráficos no-iconográficos
+│   └── fonts/              # Fuentes locales (Roboto-*.ttf)
+├── src/
+│   ├── app/                # Next.js App Router (Páginas y API)
+│   ├── components/         # Componentes UI (Atomic Design)
+│   │   ├── atoms/          # Elementos indivisibles (Botones, Inputs)
+│   │   ├── molecules/      # Agrupación de átomos (Campos de form con labels)
+│   │   ├── organisms/      # Secciones complejas (Header, modales, gráficas)
+│   │   └── templates/      # Estructura de vistas y contenedores mayores
+│   ├── lib/                # Utilidades puras (parseo, generación PDF)
+│   └── stores/             # Manejadores de estado (Zustand)
+└── .agents/                # Skills y reglas cognitivas del agente AI
+```
 
 ## Stack Tecnológico
 
@@ -29,11 +55,13 @@ Instructor G14 del área de telecomunicaciones
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------ |
 | Next.js 15+ (App Router) | Framework principal                                                                                                |
 | React 19 / TypeScript    | UI Library y Tipado estático                                                                                       |
-| Tailwind CSS 4           | Estilos visuales rediseñados y modernos                                                                            |
+| Tailwind CSS 4           | Estilos visuales rediseñados y modernos, implementando localFonts (Roboto)                                         |
 | UI Components            | Estructura basada en **Atomic Design** (Atoms, Molecules, Organisms, Templates) e integración con **Lucide Icons** |
 | Zustand                  | Estado global de la aplicación (almacenamiento en memoria de todo el informe)                                      |
 | Recharts                 | Visualización interactiva de curvas I-V y P-V                                                                      |
 | jsPDF                    | Generación de informes PDF en formato Carta con paginación dinámica                                                |
+
+_Nota: Todas las dependencias core y librerías clave se mantienen en sus versiones edge-stable más recientes._
 
 ## Instalación
 

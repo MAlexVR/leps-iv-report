@@ -8,14 +8,14 @@ export function Footer() {
         <div className="flex items-center gap-5 sm:gap-6 flex-shrink-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/logo-centro-formacion-white.svg"
+            src="/assets/logos/logo-centro-formacion-white.svg"
             alt="CEET"
             className="h-10 sm:h-12 md:h-14 w-auto drop-shadow-sm"
           />
           <div className="w-px h-10 sm:h-12 bg-white/30" />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/logo-grupo-investigacion.svg"
+            src="/assets/logos/logo-grupo-investigacion.svg"
             alt="GICS"
             className="h-10 sm:h-12 md:h-14 w-auto brightness-0 invert drop-shadow-sm"
           />

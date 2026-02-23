@@ -50,8 +50,10 @@ async function loadImage(url: string): Promise<string> {
 }
 
 async function ensureLogos() {
-  if (!logoSenaData) logoSenaData = await loadImage("/logo-sena.png");
-  if (!logoLepsData) logoLepsData = await loadImage("/logo-leps.png");
+  if (!logoSenaData)
+    logoSenaData = await loadImage("/assets/logos/logo-sena.png");
+  if (!logoLepsData)
+    logoLepsData = await loadImage("/assets/logos/logo-leps.png");
 }
 
 // ═══════════════════════════════════════════════════════════

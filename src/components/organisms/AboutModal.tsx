@@ -21,7 +21,11 @@ export function AboutModal({ isOpen, onClose }: AboutModalProps) {
     >
       <div className="text-center space-y-4">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/logo-leps.png" alt="LEPS" className="h-20 mx-auto" />
+        <img
+          src="/assets/logos/logo-leps.png"
+          alt="LEPS"
+          className="h-20 mx-auto"
+        />
 
         <div>
           <h3 className="text-base font-bold text-gray-800 tracking-tight">
@@ -83,7 +87,7 @@ export function AboutModal({ isOpen, onClose }: AboutModalProps) {
         <div className="flex justify-center items-center gap-5 pt-3 pb-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/logo-sena.png"
+            src="/assets/logos/logo-sena.png"
             alt="SENA"
             className="h-10 opacity-75 grayscale hover:grayscale-0 transition-all duration-300"
           />

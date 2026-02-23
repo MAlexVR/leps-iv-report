@@ -1,8 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+const roboto = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Roboto-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Roboto-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-roboto",
+});
 
 export const metadata: Metadata = {
   title:
@@ -19,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={inter.className}>{children}</body>
+      <body className={`${roboto.variable} font-sans`}>{children}</body>
     </html>
   );
 }

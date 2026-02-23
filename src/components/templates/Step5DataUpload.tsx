@@ -366,8 +366,8 @@ export default function Step5DataUpload() {
                   tickMargin={8}
                 />
                 <Tooltip
-                  formatter={(val: number) => val.toFixed(4)}
-                  labelFormatter={(val: number) =>
+                  formatter={(val: any) => Number(val).toFixed(4)}
+                  labelFormatter={(val: any) =>
                     `V = ${Number(val).toFixed(3)} V`
                   }
                 />
@@ -436,11 +436,11 @@ export default function Step5DataUpload() {
                   tickMargin={8}
                 />
                 <Tooltip
-                  formatter={(val: number, name: string) => [
-                    val.toFixed(4),
+                  formatter={(val: any, name: any) => [
+                    Number(val).toFixed(4),
                     name,
                   ]}
-                  labelFormatter={(val: number) =>
+                  labelFormatter={(val: any) =>
                     `V = ${Number(val).toFixed(3)} V`
                   }
                 />
