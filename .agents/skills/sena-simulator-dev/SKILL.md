@@ -44,6 +44,7 @@ Si la aplicación es para el "SENA" o se trata de un "Simulador", es OBLIGATORIO
 **3. Arquitectura de Carpetas Exigida:**
 Debes estructurar el proyecto siguiendo este esquema exacto:
 
+```text
 /public
   /fonts              -> Tipografías locales.
   /assets
@@ -66,3 +67,4 @@ Debes estructurar el proyecto siguiendo este esquema exacto:
   /store            -> Estado global con Zustand (ej. useSimulatorStore.ts).
   /utils            -> Lógica pura, fórmulas matemáticas y exportaciones.
   /lib              -> Utilidades generales y configuración (ej. utils.ts de shadcn).
+```
